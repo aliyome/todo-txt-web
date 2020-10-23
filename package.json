@@ -26,7 +26,10 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "storybook:ui": "nx run ui:storybook"
+    "storybook:ui": "nx run ui:storybook",
+    "storybook:ui:build": "nx run ui:build-storybook",
+    "storycap:ui": "storycap --serverTimeout 60000 --captureTimeout 10000 --serverCmd 'yarn http-server dist/storybook/ui --ci -p 9009' http://localhost:9009",
+    "reg": "reg-suit run"
   },
   "private": true,
   "dependencies": {
@@ -66,9 +69,15 @@
     "eslint": "7.10.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "http-server": "^0.12.3",
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.1",
     "prettier": "2.0.4",
+    "reg-keygen-git-hash-plugin": "^0.10.7",
+    "reg-notify-github-plugin": "^0.10.7",
+    "reg-publish-gcs-plugin": "^0.10.7",
+    "reg-suit": "^0.10.7",
+    "storycap": "^3.0.1",
     "ts-jest": "26.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",

@@ -1,0 +1,42 @@
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: GCP store service_account.json
+        run: |
+          echo ${{ secrets.GCP_SA_KEY }} | base64 --decode > ${HOME}/service_account.json
+          export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/service_account.json"
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Yarn cache
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+      - name: Yarn install
+        run: yarn install --frozen-lockfile
+      - name: Workaround for detached HEAD
+        run: |
+          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+      - name: Build Storybook
+        run: yarn storybook:ui:build
+      - name: Storycap
+        run: yarn storycap:ui
+      - name: Run reg-suit
+        run: yarn reg-suit run
