@@ -25,7 +25,8 @@
     "update": "ng update @nrwl/workspace",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "storybook:ui": "nx run ui:storybook"
   },
   "private": true,
   "dependencies": {
@@ -50,9 +51,13 @@
     "@nrwl/cypress": "10.3.1",
     "@nrwl/eslint-plugin-nx": "10.3.1",
     "@nrwl/jest": "10.3.1",
+    "@nrwl/storybook": "^10.3.1",
     "@nrwl/workspace": "10.3.1",
+    "@storybook/addon-knobs": "^6.0.21",
+    "@storybook/angular": "^6.0.21",
     "@types/jest": "26.0.8",
     "@types/node": "~8.9.4",
+    "@types/webpack": "4.41.21",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "~5.0.1",
