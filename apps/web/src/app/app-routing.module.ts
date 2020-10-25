@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from '@page/home/home.component';
+import { HomePage } from '@page/home/home.page';
 
-export const routes: Routes = [{ path: '', component: HomeComponent }];
+export const routes: Routes = [{ path: '', component: HomePage }];
 
 @NgModule({
   exports: [RouterModule],

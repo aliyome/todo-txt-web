@@ -1,4 +1,4 @@
-import { HomeComponent } from './home.component';
+import { HomePage } from './home.page';
 
 export default {
   title: 'HomeComponent',
@@ -8,6 +8,6 @@ export const primary = () => ({
   moduleMetadata: {
     imports: [],
   },
-  component: HomeComponent,
+  component: HomePage,
   props: {},
 });
