@@ -1,10 +1,10 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'todo-txt-web-sample',
+  selector: 'app-home',
   template: `
     <p>
-      sample works!
+      home works!
     </p>
   `,
   styles: [
@@ -16,7 +16,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SampleComponent implements OnInit {
+export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

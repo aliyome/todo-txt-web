@@ -1,13 +1,13 @@
-import { SampleComponent } from './sample.component';
+import { HomeComponent } from './home.component';
 
 export default {
-  title: 'SampleComponent',
+  title: 'HomeComponent',
 };
 
 export const primary = () => ({
   moduleMetadata: {
     imports: [],
   },
-  component: SampleComponent,
+  component: HomeComponent,
   props: {},
 });

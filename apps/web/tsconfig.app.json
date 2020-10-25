@@ -5,5 +5,5 @@
     "types": []
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
-  "exclude": ["**/*.stories.ts", "**/*.stories.js"]
+  "exclude": ["**/*.stories.ts"]
 }
