@@ -13,16 +13,24 @@
       "prefix": "todo-txt-web",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            },
             "outputPath": "dist/apps/web",
             "index": "apps/web/src/index.html",
             "main": "apps/web/src/main.ts",
             "polyfills": "apps/web/src/polyfills.ts",
             "tsConfig": "apps/web/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
-            "styles": ["apps/web/src/styles.scss"],
+            "assets": [
+              "apps/web/src/favicon.ico",
+              "apps/web/src/assets"
+            ],
+            "styles": [
+              "apps/web/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -57,7 +65,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "web:build"
           },
@@ -76,7 +84,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/web/src/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/web/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -109,7 +119,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/web-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/web-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -123,7 +135,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/ui/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/ui/src/**/*.ts"
+            ]
           }
         },
         "test": {
