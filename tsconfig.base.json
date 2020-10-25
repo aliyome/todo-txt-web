@@ -16,9 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@presentation*": ["./apps/web/src/components/presentation*"],
-      "@container*": ["./apps/web/src/components/container*"],
-      "@service*": ["./apps/web/src/service*"]
+      "@presentation*": ["./apps/web/src/app/components/presentation*"],
+      "@container*": ["./apps/web/src/app/components/container*"],
+      "@service*": ["./apps/web/src/app/service*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
