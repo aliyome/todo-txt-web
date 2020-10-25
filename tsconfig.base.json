@@ -16,9 +16,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@page*": ["./apps/web/src/app/page*"],
       "@presentation*": ["./apps/web/src/app/components/presentation*"],
       "@container*": ["./apps/web/src/app/components/container*"],
-      "@service*": ["./apps/web/src/app/service*"]
+      "@service*": ["./apps/web/src/app/service*"],
+      "@usecase*": ["./apps/web/src/app/usecase*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
