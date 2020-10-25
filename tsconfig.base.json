@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@presentation*": ["./apps/web/src/components/presentation*"],
+      "@container*": ["./apps/web/src/components/container*"],
+      "@service*": ["./apps/web/src/service*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
