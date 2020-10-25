@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { UiModule } from '@todo-txt-web/ui';
 
 import { AppComponent } from './app.component';
+import { SampleComponent } from './components/presentation/sample/sample.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, UiModule],
+  declarations: [AppComponent, SampleComponent],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
 })

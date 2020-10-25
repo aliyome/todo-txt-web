@@ -26,9 +26,9 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "storybook:ui": "nx run ui:storybook",
-    "storybook:ui:build": "nx run ui:build-storybook",
-    "storycap:ui": "storycap --serverTimeout 60000 --captureTimeout 10000 --serverCmd 'yarn http-server dist/storybook/ui --ci -p 9009' http://localhost:9009",
+    "storybook": "nx run web:storybook",
+    "storybook:build": "nx run web:build-storybook",
+    "storycap": "storycap --serverTimeout 60000 --captureTimeout 10000 --serverCmd 'yarn http-server dist/storybook/web --ci -p 9009' http://localhost:9009",
     "reg": "reg-suit run"
   },
   "private": true,

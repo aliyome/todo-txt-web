@@ -1,12 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { UiModule } from '@todo-txt-web/ui';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
-      imports: [UiModule],
     }).compileComponents();
   });
 

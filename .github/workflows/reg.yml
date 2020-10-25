@@ -34,9 +34,9 @@ jobs:
         run: |
           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
       - name: Build Storybook
-        run: yarn storybook:ui:build
+        run: yarn storybook:build
       - name: Storycap
-        run: yarn storycap:ui
+        run: yarn storycap
       - name: Run reg-suit
         run: yarn reg-suit run
 
