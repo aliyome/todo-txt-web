@@ -1,3 +1,5 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 export default {
@@ -6,7 +8,8 @@ export default {
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: [],
+    schemas: [NO_ERRORS_SCHEMA],
+    imports: [RouterTestingModule.withRoutes([])],
   },
   component: AppComponent,
   props: {},
