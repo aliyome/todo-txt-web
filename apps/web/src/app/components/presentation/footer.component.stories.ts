@@ -1,16 +1,14 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { FooterComponent } from '@presentation/footer.component';
 
 export default {
-  title: 'Root/AppComponent',
+  title: 'Presentation/FooterComponent',
 };
 
 export const primary = () => ({
   moduleMetadata: {
-    schemas: [NO_ERRORS_SCHEMA],
     imports: [RouterTestingModule.withRoutes([])],
   },
-  component: AppComponent,
+  component: FooterComponent,
   props: {},
 });

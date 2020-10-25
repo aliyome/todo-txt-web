@@ -1,14 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  template: `
-    <app-header></app-header>
-    <main>
-      <app-todo-list></app-todo-list>
-    </main>
-    <app-footer></app-footer>
-  `,
+  selector: 'app-footer',
+  template: ` <div>footer</div> `,
   styles: [
     `
       :host {
@@ -18,7 +12,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePage implements OnInit {
+export class FooterComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

@@ -6,6 +6,8 @@ const rootWebpackConfig = require('../../../.storybook/webpack.config');
  * @param {Parameters<typeof rootWebpackConfig>[0]} options
  */
 module.exports = async ({ config, mode }) => {
+  const isProd = config.mode === 'production';
+  const tailwindConfig = require('../../../tailwind.config.js')(isProd);
   config = await rootWebpackConfig({ config, mode });
 
   const tsPaths = new TsconfigPathsPlugin({
@@ -15,6 +17,22 @@ module.exports = async ({ config, mode }) => {
   config.resolve.plugins
     ? config.resolve.plugins.push(tsPaths)
     : (config.resolve.plugins = [tsPaths]);
+
+  config.module.rules.push({
+    test: /\.scss$/,
+    loader: 'postcss-loader',
+    options: {
+      postcssOptions: {
+        ident: 'postcss',
+        syntax: 'postcss-scss',
+        plugins: [
+          require('postcss-import'),
+          require('tailwindcss')(tailwindConfig),
+          require('autoprefixer'),
+        ],
+      },
+    },
+  });
 
   return config;
 };
