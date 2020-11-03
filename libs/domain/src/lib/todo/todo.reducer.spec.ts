@@ -9,6 +9,7 @@ describe('Todo Reducer', () => {
       text: text || `text-${id}`,
     } as TodoEntity);
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   beforeEach(() => {});
 
   describe('valid Todo actions', () => {
@@ -55,6 +56,7 @@ describe('Todo Reducer', () => {
 
   describe('unknown action', () => {
     it('should return the previous state', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const action = {} as any;
 
       const result = reducer(initialState, action);

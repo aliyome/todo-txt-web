@@ -24,6 +24,7 @@ describe('TodoFacade', () => {
       text: text || `text-${id}`,
     } as TodoEntity);
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   beforeEach(() => {});
 
   describe('used in NgModule', () => {
@@ -48,6 +49,7 @@ describe('TodoFacade', () => {
       class RootModule {}
       TestBed.configureTestingModule({ imports: [RootModule] });
 
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       store = TestBed.get(Store);
       facade = TestBed.get(TodoFacade);
     });

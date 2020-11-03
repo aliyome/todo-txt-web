@@ -10,11 +10,13 @@ export class TodoEffects {
     this.actions$.pipe(
       ofType(TodoActions.loadTodo),
       fetch({
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         run: (action) => {
           // Your custom service 'load' logic goes here. For now just return a success action...
           return TodoActions.loadTodoSuccess({ todo: [] });
         },
 
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         onError: (action, error) => {
           console.error('Error', error);
           return TodoActions.loadTodoFailure({ error });

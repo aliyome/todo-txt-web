@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todo-list-row',
@@ -12,11 +12,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TodoListRowComponent implements OnInit {
+export class TodoListRowComponent {
   @Input()
   item: { text: string };
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

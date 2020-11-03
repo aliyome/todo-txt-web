@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 interface TodoListItem {
   text: string;
@@ -28,12 +28,8 @@ interface TodoListItem {
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent {
   list: TodoListItem[] = [{ text: 'hoge' }, { text: 'foo' }, { text: 'bar' }];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   hoge(ev: string): void {
     console.log(ev);

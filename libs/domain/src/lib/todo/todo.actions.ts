@@ -11,6 +11,7 @@ export const loadTodoSuccess = createAction(
 
 export const loadTodoFailure = createAction(
   '[Todo] Load Todo Failure',
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props<{ error: any }>()
 );
 
