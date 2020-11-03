@@ -1,15 +1,5 @@
-import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-  Injectable,
-  EventEmitter,
-  Input,
-  Output,
-  OnDestroy,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-todo-list-repository',

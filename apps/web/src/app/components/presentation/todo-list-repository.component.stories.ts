@@ -1,10 +1,11 @@
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Meta } from '@storybook/angular';
 import { action, withActions } from '@storybook/addon-actions';
+import { text, withKnobs } from '@storybook/addon-knobs';
+import { Meta } from '@storybook/angular';
+
 import { ButtonComponent } from './button.component';
 import { TodoListRepositoryComponent } from './todo-list-repository.component';
-import { text, withKnobs } from '@storybook/addon-knobs';
 
 export default {
   title: 'Presentation/TodoListRepositoryComponent',

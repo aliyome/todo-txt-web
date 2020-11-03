@@ -1,6 +1,7 @@
 import { RouterTestingModule } from '@angular/router/testing';
-import { HeaderComponent } from '@presentation/header.component';
 import { FooterComponent } from '@presentation/footer.component';
+import { HeaderComponent } from '@presentation/header.component';
+
 import { HomePage } from './home.page';
 
 export default {

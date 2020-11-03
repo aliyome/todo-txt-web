@@ -1,5 +1,6 @@
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { Meta } from '@storybook/angular';
+
 import { ButtonComponent } from './button.component';
 
 export default {
