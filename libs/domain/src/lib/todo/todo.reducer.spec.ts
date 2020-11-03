@@ -3,10 +3,10 @@ import { TodoEntity } from './todo.models';
 import { initialState, reducer, State } from './todo.reducer';
 
 describe('Todo Reducer', () => {
-  const createTodoEntity = (id: string, name = '') =>
+  const createTodoEntity = (id: string, text = '') =>
     ({
       id,
-      name: name || `name-${id}`,
+      text: text || `text-${id}`,
     } as TodoEntity);
 
   beforeEach(() => {});
@@ -18,11 +18,28 @@ describe('Todo Reducer', () => {
         createTodoEntity('PRODUCT-zzz'),
       ];
       const action = TodoActions.loadTodoSuccess({ todo });
-
       const result: State = reducer(initialState, action);
-
       expect(result.loaded).toBe(true);
       expect(result.ids.length).toBe(2);
+    });
+
+    it('upsertTodo should return Todo list with new todo', () => {
+      const todo = createTodoEntity('test-todo-1', 'hoge');
+      const action = TodoActions.upsertTodo({ todo });
+      const result: State = reducer(initialState, action);
+      expect(result.entities['test-todo-1']).toBeTruthy();
+    });
+
+    it('upsertTodo should return Todo list with updated todo', () => {
+      const initial: State = {
+        ...initialState,
+        entities: { 'test-todo-1': createTodoEntity('test-todo-1', 'initial') },
+        ids: ['test-todo-1'],
+      };
+      const todo = createTodoEntity('test-todo-1', 'updated');
+      const action = TodoActions.upsertTodo({ todo });
+      const result: State = reducer(initial, action);
+      expect(result.entities['test-todo-1'].text).toBe(todo.text);
     });
   });
 

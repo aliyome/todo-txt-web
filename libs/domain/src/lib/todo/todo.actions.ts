@@ -13,3 +13,8 @@ export const loadTodoFailure = createAction(
   '[Todo] Load Todo Failure',
   props<{ error: any }>()
 );
+
+export const upsertTodo = createAction(
+  '[Todo] Upsert Todo',
+  props<{ todo: TodoEntity }>()
+);

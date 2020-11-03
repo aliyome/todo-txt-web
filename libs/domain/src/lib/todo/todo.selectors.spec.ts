@@ -5,10 +5,10 @@ import * as TodoSelectors from './todo.selectors';
 describe('Todo Selectors', () => {
   const ERROR_MSG = 'No Error Available';
   const getTodoId = (it) => it['id'];
-  const createTodoEntity = (id: string, name = '') =>
+  const createTodoEntity = (id: string, text = '') =>
     ({
       id,
-      name: name || `name-${id}`,
+      text: text || `name-${id}`,
     } as TodoEntity);
 
   let state;

@@ -18,10 +18,10 @@ interface TestSchema {
 describe('TodoFacade', () => {
   let facade: TodoFacade;
   let store: Store<TestSchema>;
-  const createTodoEntity = (id: string, name = '') =>
+  const createTodoEntity = (id: string, text = '') =>
     ({
       id,
-      name: name || `name-${id}`,
+      text: text || `text-${id}`,
     } as TodoEntity);
 
   beforeEach(() => {});
