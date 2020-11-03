@@ -318,6 +318,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/core@^10.0.0":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-10.2.1.tgz#05ad30c43ba925a62074515c9d002c1c5337047c"
+  integrity sha512-zt9G5Ei1nxB6yVJqpiH7K6npaiEUrPWlDCq6vwXeJbmO3tbw2WWiqD55Wkx5hRfysY43swC5j7VveNytHidkkQ==
+  dependencies:
+    tslib "^2.0.0"
+
 "@angular/core@^10.1.0":
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-10.2.0.tgz#a5eac8b37ef5268f90e45e06b1a4d48ab55f31dc"
@@ -2017,6 +2024,27 @@
   integrity sha512-pw0hRQNlyBBRHH1NRWl3TF+RtEAS4XOSnoTHPtQ84Ib/bEribvexsdEq3k6yLWvR3tLTudb5J6SYwYawcM6omA==
   dependencies:
     tslib "^2.0.0"
+
+"@ngrx/entity@^10.0.0":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-10.0.1.tgz#2550a03c71d05a9691f1615eca80506411021cd0"
+  integrity sha512-Do9HfIR1qp+FQ2YK1vQlJ77J/D1A9mOYtD5xEwi66v/cyltpTS35Y3CaQwESyLXDK89+X41nSmPQfcYno1jhRw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/router-store@^10.0.0":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-10.0.1.tgz#c5967a6f29ef19b810b3bef78a92b23e40fd8f81"
+  integrity sha512-UuTIYJWKhYv5xlhcJw3pz3C+DbLk5DzTWYJ03B7J+O2ELnKlbMDdjoejzNVDGOGKKWjzg/irNvkC/Opu2Zspqg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/schematics@^10.0.0":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-10.0.1.tgz#57bc7a42cb35fd86099c105a58c3f053fb8cce7f"
+  integrity sha512-EECNZrmpXpTAyuuSVcRhCLvZXH9pAVK8WVJBxn2C+oNIkXpZwwNR9/pKFw1CVf4nsWVWEwmcoQRjyamFxlRo9A==
+  dependencies:
+    "@angular/core" "^10.0.0"
 
 "@ngrx/store-devtools@^10.0.1":
   version "10.0.1"

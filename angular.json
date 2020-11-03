@@ -157,6 +157,32 @@
           }
         }
       }
+    },
+    "domain": {
+      "projectType": "library",
+      "root": "libs/domain",
+      "sourceRoot": "libs/domain/src",
+      "prefix": "todo-txt-web",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/domain/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
