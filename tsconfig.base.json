@@ -20,7 +20,8 @@
       "@presentation*": ["./apps/web/src/app/components/presentation*"],
       "@container*": ["./apps/web/src/app/components/container*"],
       "@service*": ["./apps/web/src/app/service*"],
-      "@usecase*": ["./apps/web/src/app/usecase*"]
+      "@usecase*": ["./apps/web/src/app/usecase*"],
+      "@todo-txt-web/domain": ["libs/domain/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
