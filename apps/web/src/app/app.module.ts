@@ -12,6 +12,8 @@ import { ButtonComponent } from '@presentation/button.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePage } from '@page/home/home.page';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,14 @@ import { HomePage } from '@page/home/home.page';
     TodoListRepositoryComponent,
     ButtonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
