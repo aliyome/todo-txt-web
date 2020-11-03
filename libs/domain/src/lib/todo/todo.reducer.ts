@@ -38,6 +38,9 @@ const todoReducer = createReducer(
   on(TodoActions.loadTodoFailure, (state, { error }) => ({ ...state, error })),
   on(TodoActions.upsertTodo, (state, action) =>
     todoAdapter.upsertOne(action.todo, state)
+  ),
+  on(TodoActions.removeTodo, (state, action) =>
+    todoAdapter.removeOne(action.id, state)
   )
 );
 

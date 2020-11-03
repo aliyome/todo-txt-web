@@ -41,6 +41,16 @@ describe('Todo Reducer', () => {
       const result: State = reducer(initial, action);
       expect(result.entities['test-todo-1'].text).toBe(todo.text);
     });
+    it('removeTodo should return Todo list after remove todo', () => {
+      const initial: State = {
+        ...initialState,
+        entities: { 'test-todo-1': createTodoEntity('test-todo-1', 'initial') },
+        ids: ['test-todo-1'],
+      };
+      const action = TodoActions.removeTodo({ id: 'test-todo-1' });
+      const result: State = reducer(initial, action);
+      expect(result.ids.length).toBe(0);
+    });
   });
 
   describe('unknown action', () => {

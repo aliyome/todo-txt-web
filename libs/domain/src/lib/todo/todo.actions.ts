@@ -18,3 +18,8 @@ export const upsertTodo = createAction(
   '[Todo] Upsert Todo',
   props<{ todo: TodoEntity }>()
 );
+
+export const removeTodo = createAction(
+  '[Todo] Remove Todo',
+  props<{ id: string }>()
+);
